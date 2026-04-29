@@ -1,0 +1,75 @@
+[
+  {
+    "title": "V2hhdCdzIFNoYWtpbicgQmFjb24/IDogT2ggTWlsLXR1IQ==",
+    "description": "V2UgYXJlIGEgc21hbGwgdGVhbSBkZXZlbG9waW5nIHRoZSBwcm9qZWN0OiAiV1NCIC0gT2ggTWlsLVR1ISIuCgoiV1NCIC0gT2ggTWlsLXR1ISIgaXMgYW4gZXhwYW5zaW9uIG9yIHJlLWludmlzaW9uIG9mICJXaGF0J3MgU2hha2luJywgQmFjb24/IiBvciB3ZWxsIGtub3duIGdlbmVyYWxseSBhcyAiQmFjb25UdSIgb3Igc2ltcGx5IGp1c3QgIkJhY29uMiIuCgpPdXIgcGxhbiBmb3IgIk9oIE1pbC10dSEiIGlzIHRvIGFkZCBuZXcgb3JpZ2luYWwgY29udGVudCBub3QgYmFzZWQgYXJvdW5kIHRoZSBvcmlnaW5hbCBwbGFucyBmb3IgV1NCLCB3aGlsZSBub3QgcmVwbGFjaW5nIHRoZSBhbHJlYWR5IGV4aXN0aW5nIGNvbnRlbnQgb2YgdGhlIG9yaWdpbmFsIHByb2plY3QuIApXZSBtaWdodCB0d2VhayBzb21lIHByZS1tYWRlIGFzc2V0cywgdmlzdWFscyBhbmQgb3IgZ2FtZXBsYXkgdG8gZml0IG91ciBuZXdlciBkaXJlY3Rpb24h",
+    "status": "wip",
+    "basedon": "skatenic era / WSB",
+    "thumbnails": [
+      "mi\\m0_0.jpg",
+      "mi\\m0_1.jpg",
+      "mi\\m0_2.jpg"
+    ],
+    "downloads": [
+      {
+        "title": "Mil-Tu's Surprise (Spin-off)",
+        "link": "https://ratmat-mrcrack.itch.io/mil-tus-surprise",
+        "order": 0
+      }
+    ],
+    "team": [
+      {
+        "name": "Pawkone (pawkone)",
+        "role": "Director, Artist, Coder, Concepts, Level Design"
+      },
+      {
+        "name": "Stupid Rat (the_real_stupid_rat)",
+        "role": "Co-Director, Social Owner, Coder, Concepts, Level Design"
+      },
+      {
+        "name": "Mr.Sigma (thegouse325.jfp_24666)",
+        "role": "Artist, Coder, Concepts"
+      },
+      {
+        "name": "Berry",
+        "role": "Coder, Artist, Concepts"
+      },
+      {
+        "name": "Target (targetbuldoser)",
+        "role": "Artist, Playtester"
+      },
+      {
+        "name": "Ivan (theperfectpepper)",
+        "role": "Artist, Playtester"
+      },
+      {
+        "name": "Cornman (genericusernamec_)",
+        "role": "Artist, Concepts, Playtester"
+      },
+      {
+        "name": "Enik (enikofdom)",
+        "role": "Artist, Playtester"
+      },
+      {
+        "name": "Lizzy (alecdagamemaster)",
+        "role": "Playtester"
+      },
+      {
+        "name": "Dranone",
+        "role": "Playtester"
+      },
+      {
+        "name": "Dimitri (tomittymatty)",
+        "role": "Playtester"
+      },
+      {
+        "name": "Basik (meow_basikru)",
+        "role": "Playtester"
+      }
+    ],
+    "socials": {
+      "Twitter/X": "https://x.com/WSBMod_OhMiltu",
+      "Discord": "https://discord.com/invite/3F6PuFJAP6",
+      "Youtube": "https://www.youtube.com/channel/UCmA5p5tcKHbvc2KALSqbUnw"
+    }
+  }
+]

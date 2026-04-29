@@ -1,0 +1,128 @@
+body {
+margin: 0;
+font-family: "Comic Sans MS", "Comic Neue", Verdana, Arial, sans-serif;
+background: #e6e3dd;
+color: #1f1a14;
+font-size: 175%;
+}
+
+img {
+image-rendering: pixelated;
+image-rendering: crisp-edges;
+}
+
+a {
+color: #8604e3;
+text-decoration: none;
+}
+
+a:hover {
+text-decoration: underline;
+}
+
+.logo {
+position: fixed;
+top: 0;
+left: 0;
+background: #f2f0ec;
+color: #1f1a14;
+border-right: 2px solid #8604e3;
+border-bottom: 2px solid #ffa700;
+padding: 10px;
+}
+
+.sidebar {
+position: fixed;
+top: 0;
+left: 0;
+width: 280px;
+height: 100vh;
+padding-top: 180px;
+background: #f2f0ec;
+border-right: 2px solid #8604e3;
+}
+
+.sidebar a {
+display: block;
+padding: 12px;
+font-size: 0.9em;
+color: #1f1a14;
+border-bottom: 1px solid #ddd;
+}
+
+.sidebar a:hover {
+background: #ffa700;
+color: #1f1a14;
+}
+
+.main {
+margin-left: 280px;
+padding: 30px;
+}
+
+.box {
+background: #ffffff;
+border: 1px solid #ddd;
+padding: 15px;
+margin-bottom: 15px;
+font-size: 1em;
+}
+
+input {
+padding: 10px;
+background: #ffffff;
+border: 1px solid #8604e3;
+color: #1f1a14;
+font-size: 1em;
+}
+
+button {
+padding: 10px 14px;
+background: #8604e3;
+border: 1px solid #ffa700;
+color: #ffffff;
+cursor: pointer;
+font-size: 1em;
+}
+
+button:hover {
+background: #6f03b8;
+}
+
+.box strong {
+color: #ffa700;
+}
+
+.teambar {
+border-top: 3px solid #333;
+border-bottom: 3px solid #333;
+padding: 20px;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 10px 20px;
+color: white;
+margin-top: 40px;
+}
+
+.teambar h3 {
+color: black;
+grid-column: 1 / -1;
+margin: 0 0 10px 0;
+}
+
+.teambar .member {
+color: black;
+padding: 6px 0;
+min-width: 180px;
+}
+
+.teambar .name {
+color: black;
+font-weight: bold;
+}
+
+.teambar .role {
+color: black;
+font-size: 24px;
+opacity: 0.75;
+}

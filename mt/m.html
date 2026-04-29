@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>mod viewer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="sidebar">
+<a href="../mt">home</a>
+<a href="s.html">search</a>
+</div>
+<div class="main">
+<marquee behavior="alternate" direction="right" scrollamount="6">
+<h1 id="titleTop">title - #id</h1>
+</marquee>
+<div class="box">
+<h2 id="title">title</h2>
+<p id="desc">desc</p>
+<div class="teambar" id="teambar"></div>
+</div>
+<script src="https://giscus.app/client.js"
+        data-repo="tfends/moddingtucentral-others"
+        data-repo-id="R_kgDOSPqcww"
+        data-category="General"
+        data-category-id="DIC_kwDOSPqcw84C78wD"
+        data-mapping="url"
+        data-strict="0"
+        data-reactions-enabled="0"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light_protanopia"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+</div>
+<img src="a/logo.png" class="logo">
+<script>
+function dec(str) {
+try {
+return decodeURIComponent(escape(atob(str)));
+} catch {
+return str;
+}
+}
+function getModIndex() {
+const params = new URLSearchParams(window.location.search);
+return parseInt(params.get("id")) || 0;
+}
+fetch("list.json").then(res => res.json()).then(data => {
+const i = getModIndex();
+const mod = data[i];
+if (!mod) return;
+const title = dec(mod.title);
+const desc = dec(mod.description);
+const status = mod.status || "unknown";
+const basedon = mod.basedon || "unknown";
+document.title = title;
+document.getElementById("titleTop").textContent = title + " - #" + i;
+document.getElementById("title").textContent = title;
+document.getElementById("desc").innerHTML = desc.replace(/\n/g, "<br>");
+const box = document.querySelector(".box");
+const info = document.createElement("p");
+info.style.opacity = "0.8";
+info.style.marginTop = "10px";
+info.innerHTML = "<b>status:</b> " + status + " &nbsp;&nbsp;|&nbsp;&nbsp;<b>based on:</b> " + basedon;
+box.appendChild(info);
+if (mod.downloads && mod.downloads.length > 0) {
+const dlTitle = document.createElement("h3");
+dlTitle.textContent = "downloads";
+dlTitle.style.marginTop = "96px";
+box.appendChild(dlTitle);
+mod.downloads.forEach(d => {
+const name = d.title || "download";
+const link = d.link || "#";
+const a = document.createElement("a");
+a.href = link;
+a.textContent = name;
+a.style.display = "block";
+a.style.color = "#3a86ff";
+a.target = "_blank";
+box.appendChild(a);
+});
+}
+if (mod.thumbnails && mod.thumbnails.length > 0) {
+const thWrap = document.createElement("div");
+thWrap.style.margin = "20px 0 40px 0";
+const scroller = document.createElement("div");
+scroller.style.display = "flex";
+scroller.style.overflowX = "auto";
+scroller.style.gap = "128px";
+scroller.style.maxWidth = "100%";
+mod.thumbnails.forEach(url => {
+const img = document.createElement("img");
+img.src = url;
+img.style.border = "3px solid #333";
+img.style.cursor = "pointer";
+img.style.flex = "0 0 auto";
+img.onclick = () => window.open(url, "_blank");
+scroller.appendChild(img);
+});
+thWrap.style.display = "flex";
+thWrap.style.alignItems = "center";
+thWrap.appendChild(scroller);
+box.parentNode.insertBefore(thWrap, box);
+}
+if (mod.socials) {
+const socialTitle = document.createElement("h3");
+socialTitle.textContent = "socials";
+socialTitle.style.marginTop = "96px";
+box.appendChild(socialTitle);
+Object.entries(mod.socials).forEach(([name, url]) => {
+const a = document.createElement("a");
+a.href = url;
+a.textContent = name;
+a.target = "_blank";
+a.style.display = "block";
+a.style.color = "#3a86ff";
+box.appendChild(a);
+});
+}
+if (mod.team) {
+const bar = document.getElementById("teambar");
+const title = document.createElement("h3");
+title.textContent = "Developers";
+bar.appendChild(title);
+mod.team.forEach(member => {
+const div = document.createElement("div");
+div.className = "member";
+const name = document.createElement("div");
+name.className = "name";
+name.textContent = member.name;
+const role = document.createElement("div");
+role.className = "role";
+role.textContent = member.role;
+div.appendChild(name);
+div.appendChild(role);
+bar.appendChild(div);
+});
+}
+});
+</script>
+</body>
+</html>

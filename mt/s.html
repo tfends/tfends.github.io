@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>mod hub</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="sidebar">
+<a href="../mt">home</a>
+<a href="s.html">search</a>
+</div>
+<div class="main">
+<marquee behavior="alternate" direction="right" scrollamount="6">
+<h1>search</h1>
+</marquee>
+<div class="box">
+<input id="q" placeholder="search mods..." />
+<button id="searchBtn">search</button>
+<div id="results" style="margin-top:20px;"></div>
+</div>
+</div>
+<img src="a/logo.png" class="logo">
+<script>
+function dec(str) {
+try {
+return decodeURIComponent(escape(atob(str)));
+} catch {
+return str;
+}
+}
+function getQuery() {
+const p = new URLSearchParams(window.location.search);
+return (p.get("q") || "").toLowerCase();
+}
+function makeThumb(thumbnails) {
+let i = 0;
+const img = document.createElement("img");
+img.style.width = "320px";
+img.style.height = "180px";
+img.style.objectFit = "cover";
+img.style.border = "2px solid #333";
+img.style.flex = "0 0 auto";
+function swap() {
+if (!thumbnails || thumbnails.length === 0) return;
+img.src = thumbnails[i % thumbnails.length];
+i++;
+}
+swap();
+setInterval(swap, 2000);
+return img;
+}
+function render(list, data) {
+const results = document.getElementById("results");
+results.innerHTML = "";
+list.forEach(i => {
+const mod = data[i];
+if (!mod) return;
+const title = dec(mod.title);
+const status = mod.status || "unknown";
+const basedon = mod.basedon || "unknown";
+const row = document.createElement("div");
+row.style.display = "flex";
+row.style.gap = "12px";
+row.style.padding = "10px";
+row.style.marginBottom = "10px";
+row.style.border = "2px solid #333";
+row.style.cursor = "pointer";
+row.onclick = () => {
+window.location.href = "m.html?id=" + i;
+};
+const thumb = makeThumb(mod.thumbnails);
+const right = document.createElement("div");
+right.style.display = "flex";
+right.style.flexDirection = "column";
+right.style.justifyContent = "center";
+const t = document.createElement("div");
+t.textContent = title;
+t.style.fontSize = "32px";
+t.style.fontWeight = "bold";
+const info = document.createElement("div");
+info.style.fontSize = "20px";
+info.style.opacity = "0.7";
+info.style.marginTop = "4px";
+info.innerHTML = "<b>status:</b> " + status + " &nbsp;|&nbsp; <b>based on:</b> " + basedon;
+right.appendChild(t);
+right.appendChild(info);
+row.appendChild(thumb);
+row.appendChild(right);
+results.appendChild(row);
+});
+}
+fetch("list.json").then(r => r.json()).then(data => {
+const q = getQuery();
+document.getElementById("q").value = q;
+document.getElementById("searchBtn").onclick = () => {
+const v = document.getElementById("q").value;
+window.location.href = "s.html?q=" + encodeURIComponent(v);
+};
+let matches = [];
+data.forEach((mod, i) => {
+const title = dec(mod.title).toLowerCase();
+const desc = dec(mod.description).toLowerCase();
+if (!q || q.trim() === "") {
+matches.push(i);
+} else if (title.includes(q) || desc.includes(q)) {
+matches.push(i);
+}
+});
+render(matches, data);
+});
+</script>
+</body>
+</html>

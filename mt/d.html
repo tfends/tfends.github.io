@@ -1,6 +1,6 @@
 <!DOCTYPE html><meta charset="UTF-8"><p id=s>loading...</p><script>
 (async()=>{
-let p=new URLSearchParams(location.search),m=p.get("mod"),i=p.get("ver");
+let p=new URLSearchParams(location.search),m=p.get("m"),i=p.get("v");
 if(!m||!i)return s.textContent="ERROR - Missing queries! (Don't visit this page like a walk in park, ok?)";
 try{
 let t=await (await fetch("https://example.com/list.txt")).text(),
