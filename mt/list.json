@@ -71,5 +71,87 @@
       "Discord": "https://discord.com/invite/3F6PuFJAP6",
       "Youtube": "https://www.youtube.com/channel/UCmA5p5tcKHbvc2KALSqbUnw"
     }
+  },
+  {
+    "title": "U3BpbGwgdGhlIE11c3RhcmQsIE1hbmdicm8h",
+    "description": "ImkgYW0gYmVzdCBiYWNvbnR1IG1vZCBldmVyIgoKIlNQSUxMIFRIRSBNVVNUQVJELCBNQU5HQlJPISBpdHMgYSBzaGl0dHkgcmVza2luICJyZXBhaW50IiBvZiB0aGUgbmV3IGhpdCBwaXp6YSB0b3dlciBmYW5nYW1lLCAiV2hhdCdzIFNoYWtpbiwgQmFjb24/IiBvd25lZCBieSBNaXp1ZGlkZHkuIChha2EgbWl6dWtpbm55KSI=",
+    "status": "wip",
+    "basedon": "skatenic era / WSB",
+    "thumbnails": [
+      "mi\\m1_0.jpg",
+      "mi\\m1_1.jpg",
+      "mi\\m1_2.jpg"
+    ],
+    "downloads": [],
+    "team": [
+      {
+        "name": "mangoenjoyer6741",
+        "role": "owner, spriter"
+      },
+      {
+        "name": "bonoise0850",
+        "role": "spriter"
+      },
+      {
+        "name": "Doizy",
+        "role": "spriter"
+      },
+      {
+        "name": "wifle",
+        "role": "spriter"
+      },
+      {
+        "name": "kenrotten",
+        "role": "musician, spriter"
+      },
+      {
+        "name": "horrible combine",
+        "role": "spriter"
+      },
+      {
+        "name": "Man With a Art",
+        "role": "spriter"
+      },
+      {
+        "name": "McTuff",
+        "role": "spriter"
+      },
+      {
+        "name": "MeepGuy",
+        "role": "spriter"
+      },
+      {
+        "name": "Spectrojam",
+        "role": "spriter, concept artist"
+      },
+      {
+        "name": "pigcatdog_2010",
+        "role": "spriter, concept artist"
+      },
+      {
+        "name": "patricio estrella the almighty",
+        "role": "spriter"
+      },
+      {
+        "name": "BasikRU",
+        "role": "coder"
+      }
+    ],
+    "socials": {
+      "Twitter/X": "https://x.com/smileinteract",
+      "Discord": "https://discord.gg/fQfg6AyHeV",
+      "Youtube": "https://www.youtube.com/@mango67779",
+      "Itch.io Page": "https://mangoenjoyer6741.itch.io/spill-the-mustard-mangbro"
+    }
+  },
+  {
+    "title": "bW9kIDI=",
+    "description": "",
+    "status": "on hold",
+    "basedon": "custom",
+    "thumbnails": [],
+    "downloads": [],
+    "team": [],
+    "socials": {}
   }
 ]
