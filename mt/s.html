@@ -91,7 +91,7 @@ row.appendChild(right);
 results.appendChild(row);
 });
 }
-fetch("https://raw.githubusercontent.com/tfends/moddingtucentral-others/refs/heads/main/m.json").then(r => r.json()).then(data => {
+fetch("https://raw.githubusercontent.com/tfends/moddingtucentral-others/refs/heads/main/m.json", {cache: "no-cache"}).then(r => r.json()).then(data => {
 const q = getQuery();
 document.getElementById("q").value = q;
 document.getElementById("searchBtn").onclick = () => {
