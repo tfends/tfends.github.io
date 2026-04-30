@@ -20,20 +20,20 @@
 <div class="teambar" id="teambar"></div>
 </div>
 <script src="https://giscus.app/client.js"
-        data-repo="tfends/moddingtucentral-others"
-        data-repo-id="R_kgDOSPqcww"
-        data-category="General"
-        data-category-id="DIC_kwDOSPqcw84C78wD"
-        data-mapping="url"
-        data-strict="0"
-        data-reactions-enabled="0"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="light_protanopia"
-        data-lang="en"
-        data-loading="lazy"
-        crossorigin="anonymous"
-        async>
+data-repo="tfends/moddingtucentral-others"
+data-repo-id="R_kgDOSPqcww"
+data-category="General"
+data-category-id="DIC_kwDOSPqcw84C78wD"
+data-mapping="url"
+data-strict="0"
+data-reactions-enabled="0"
+data-emit-metadata="0"
+data-input-position="bottom"
+data-theme="light_protanopia"
+data-lang="en"
+data-loading="lazy"
+crossorigin="anonymous"
+async>
 </script>
 </div>
 <img src="a/logo.png" class="logo">
@@ -52,7 +52,7 @@ return parseInt(params.get("id")) || 0;
 fetch("https://raw.githubusercontent.com/tfends/moddingtucentral-others/refs/heads/main/m.json").then(res => res.json()).then(data => {
 const i = getModIndex();
 const mod = data[i];
-if (!mod) return;
+if (!mod) { window.location.replace("e.html"); return }
 const title = dec(mod.title);
 const desc = dec(mod.description);
 const status = mod.status || "unknown";
