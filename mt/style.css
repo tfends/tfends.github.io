@@ -1,22 +1,36 @@
 body {
 margin: 0;
 font-family: "Comic Sans MS", "Comic Neue", Verdana, Arial, sans-serif;
-background: #e6e3dd;
 color: #1f1a14;
 font-size: 175%;
+background: url("a/bg.png") repeat;
+image-rendering: pixelated;
+animation: pluh 6s linear infinite;
+}
+
+@keyframes pluh {
+from {
+background-position: 0 0;
+}
+to {
+background-position: 160px 256px;
+}
 }
 
 img {
 image-rendering: pixelated;
 image-rendering: crisp-edges;
+border: 2px solid #6751ff;
 }
 
 a {
-color: #8604e3;
+color: #6751ff;
 text-decoration: none;
+transition: 0.15s ease;
 }
 
 a:hover {
+color: #b5cc16;
 text-decoration: underline;
 }
 
@@ -24,10 +38,10 @@ text-decoration: underline;
 position: fixed;
 top: 0;
 left: 0;
-background: #f2f0ec;
+background: #ffffff;
 color: #1f1a14;
-border-right: 2px solid #8604e3;
-border-bottom: 2px solid #ffa700;
+border-right: 3px solid #6751ff;
+border-bottom: 3px solid #b5cc16;
 padding: 10px;
 }
 
@@ -35,11 +49,11 @@ padding: 10px;
 position: fixed;
 top: 0;
 left: 0;
-width: 280px;
+width: 282px;
 height: 100vh;
 padding-top: 180px;
-background: #f2f0ec;
-border-right: 2px solid #8604e3;
+background: #ffffff;
+border-right: 3px solid #6751ff;
 }
 
 .sidebar a {
@@ -47,12 +61,14 @@ display: block;
 padding: 12px;
 font-size: 0.9em;
 color: #1f1a14;
-border-bottom: 1px solid #ddd;
+border-bottom: 1px solid #e6e3dd;
+transition: 0.15s ease;
 }
 
 .sidebar a:hover {
-background: #ffa700;
+background: #b5cc16;
 color: #1f1a14;
+padding-left: 20px;
 }
 
 .main {
@@ -62,67 +78,75 @@ padding: 30px;
 
 .box {
 background: #ffffff;
-border: 1px solid #ddd;
+border: 2px solid #6751ff;
 padding: 15px;
 margin-bottom: 15px;
 font-size: 1em;
+box-shadow: 4px 4px 0 #b5cc16;
 }
 
 input {
 padding: 10px;
 background: #ffffff;
-border: 1px solid #8604e3;
+border: 2px solid #6751ff;
 color: #1f1a14;
 font-size: 1em;
 }
 
+input:focus {
+outline: none;
+border-color: #b5cc16;
+}
+
 button {
 padding: 10px 14px;
-background: #8604e3;
-border: 1px solid #ffa700;
+background: #6751ff;
+border: 2px solid #b5cc16;
 color: #ffffff;
 cursor: pointer;
 font-size: 1em;
+transition: 0.1s ease;
 }
 
 button:hover {
-background: #6f03b8;
+background: #b5cc16;
+color: #1f1a14;
 }
 
 .box strong {
-color: #ffa700;
+color: #6751ff;
 }
 
 .teambar {
-border-top: 3px solid #333;
-border-bottom: 3px solid #333;
+border-top: 4px solid #6751ff;
+border-bottom: 4px solid #b5cc16;
 padding: 20px;
 display: grid;
 grid-template-columns: repeat(3, 1fr);
 gap: 10px 20px;
-color: white;
 margin-top: 40px;
+background: #ffffff;
 }
 
 .teambar h3 {
-color: black;
 grid-column: 1 / -1;
 margin: 0 0 10px 0;
+color: #1f1a14;
 }
 
 .teambar .member {
-color: black;
+color: #1f1a14;
 padding: 6px 0;
 min-width: 180px;
 }
 
 .teambar .name {
-color: black;
+color: #6751ff;
 font-weight: bold;
 }
 
 .teambar .role {
-color: black;
+color: #1f1a14;
 font-size: 24px;
-opacity: 0.75;
+opacity: 0.8;
 }
