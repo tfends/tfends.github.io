@@ -49,7 +49,7 @@ function getModIndex() {
 const params = new URLSearchParams(window.location.search);
 return parseInt(params.get("id")) || 0;
 }
-fetch("https://raw.githubusercontent.com/tfends/moddingtucentral-others/refs/heads/main/m.json", {cache: "no-cache"}).then(res => res.json()).then(data => {
+fetch("d/m.json", {cache: "no-cache"}).then(res => res.json()).then(data => {
 const i = getModIndex();
 const mod = data[i];
 if (!mod) { window.location.replace("e.html"); return }
@@ -94,7 +94,7 @@ scroller.style.gap = "128px";
 scroller.style.maxWidth = "100%";
 mod.thumbnails.forEach(url => {
 const img = document.createElement("img");
-const fullUrl = "https://raw.githubusercontent.com/tfends/moddingtucentral-others/refs/heads/main/" + url;
+const fullUrl = "d/" + url;
 img.src = fullUrl;
 img.style.border = "3px solid #333";
 img.style.cursor = "pointer";
