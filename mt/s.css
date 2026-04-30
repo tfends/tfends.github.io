@@ -3,7 +3,7 @@ margin: 0;
 font-family: "Comic Sans MS", "Comic Neue", Verdana, Arial, sans-serif;
 color: #1f1a14;
 font-size: 175%;
-background: url("a/bg.png") repeat;
+background: url("b.png") repeat;
 image-rendering: pixelated;
 animation: pluh 6s linear infinite;
 }
